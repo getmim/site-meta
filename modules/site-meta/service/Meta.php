@@ -153,7 +153,7 @@ class Meta extends \Mim\Service
                 continue;
 
             if($prop === 'responsive')
-                $value = 'width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no';
+                $value = 'width=device-width, initial-scale=1, shrink-to-fit=no';
 
             if(is_string($value))
                 $value = hs($value);
