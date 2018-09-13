@@ -42,22 +42,22 @@ return [
         'params' => [
             // 'al_an_account' => 'ALEXA_ACCOUNT',
             // 'al_an_domain' => 'ALEXA_DOMAIN',
-            'al_verification' => 'ALEXA_VERIFICATION',
-            'bi_verification' => 'BING_VERIFICATION',
-            'color' => '#000000',
-            // 'fb_js' => false,
-            'fb_appid' => 'FB_APPID',
-            'fb_pageid' => 'FB_PAGEID',
-            // 'go_js' => false,
-            'go_verification' => 'GOOGLE_VERIFICATION',
-            'ga_property' => 'GA:PROVERTY',
-            // 'ig_js' => false,
-            'locale' => 'en-US',
-            'name' => 'My Powerfull Site',
-            'pi_verification' => 'PINTEREST_VERIFICATION',
+            // 'al_verification' => 'ALEXA_VERIFICATION',
+            // 'bi_verification' => 'BING_VERIFICATION',
+            // 'color' => '#000000',
+            'fb_js' => false,
+            // 'fb_appid' => 'FB_APPID',
+            // 'fb_pageid' => 'FB_PAGEID',
+            'go_js' => false,
+            // 'go_verification' => 'GOOGLE_VERIFICATION',
+            // 'ga_property' => 'GA:PROVERTY',
+            'ig_js' => false,
+            // 'locale' => 'en-US',
+            // 'name' => 'My Powerfull Site',
+            // 'pi_verification' => 'PINTEREST_VERIFICATION',
             'responsive' => true,
-            // 'tw_js' => false,
-            'ya_verificationn' => 'YANDEX_VERIFICATION'
+            'tw_js' => false,
+            // 'ya_verificationn' => 'YANDEX_VERIFICATION'
         ]
     ]
 ];
