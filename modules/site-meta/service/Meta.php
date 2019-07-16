@@ -111,10 +111,10 @@ class Meta extends \Mim\Service
         if($this->site_settigs && isset($app->setting->$meta_key))
             return $app->setting->$meta_key;
 
-        return $app->config->siteMeta->params->$key ?? null;
+        return $app->config->siteMeta->params->$key ?? '';
     }
 
-    private function schemaOrg($name){
+    public function schemaOrg($name){
         $site = \Mim::$app->router->to('siteHome');
         return [
             '@type'         => 'Organization',
