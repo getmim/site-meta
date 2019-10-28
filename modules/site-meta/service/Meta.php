@@ -117,6 +117,7 @@ class Meta extends \Mim\Service
     public function schemaOrg($name){
         $site = \Mim::$app->router->to('siteHome');
         return [
+            '@context'      => 'http://schema.org/',
             '@type'         => 'Organization',
             'name'          => $name,
             'url'           => $site,
