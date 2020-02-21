@@ -111,12 +111,13 @@ class Meta extends \Mim\Service
         if($this->site_settigs && isset($app->setting->$meta_key))
             return $app->setting->$meta_key;
 
-        return $app->config->siteMeta->params->$key ?? '';
+        return $app->config->siteMeta->params->$key ?? $app->config->$key ?? '';
     }
 
     public function schemaOrg($name){
         $site = \Mim::$app->router->to('siteHome');
-        return [
+
+        $result = [
             '@context'      => 'http://schema.org/',
             '@type'         => 'Organization',
             'name'          => $name,
@@ -128,6 +129,36 @@ class Meta extends \Mim\Service
                 'width'         => 200
             ]
         ];
+
+        if(!module_exists('site-setting'))
+            return $result;
+
+        $socials = [
+            'dribbble',
+            'facebook',
+            'flicker',
+            'google_plus',
+            'instagram',
+            'linkedin',
+            'myspace',
+            'pinterest',
+            'soundcloud',
+            'tumblr',
+            'twitter',
+            'vimeo',
+            'youtube'
+        ];
+        $sameAs  = [];
+
+        foreach($socials as $soc){
+            if(\Mim::$app->setting->{'app_social_'.$soc})
+                $sameAs[] = \Mim::$app->setting->{'app_social_'.$soc};
+        }
+
+        if($sameAs)
+            $result['sameAs'] = $sameAs;
+
+        return $result;
     }
 
     public function head(array $opts): string{
