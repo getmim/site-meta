@@ -341,6 +341,17 @@ class Meta extends \Mim\Service
                 $tx.=   'ga(\'send\',\'pageview\');';
                 $tx.= '</script>' . $nl;
             }
+
+            $gtag_property = $this->defaultValue('gtag_property', $opts);
+            if($gtag_property){
+                $tx = '<script async src="https://www.googletagmanager.com/gtag/js?id='.$gtag_property.'"></script>';
+                $tx.= '<script>';
+                $tx.=   'window.dataLayer = window.dataLayer || [];';
+                $tx.=   'function gtag(){dataLayer.push(arguments);}';
+                $tx.=   'gtag(\'js\', new Date());';
+                $tx.=   'gtag(\'config\', \'UA-173923084-1\');';
+                $tx.= '</script>' . $nl;
+            }
         }
 
         return $tx;

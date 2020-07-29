@@ -58,6 +58,9 @@ return [
             // google analytics property
             'ga_property' => '',
 
+            // google tag analytics
+            'gtag_property' => '',
+
             // include instagram js
             'ig_js' => true,
 
