@@ -344,7 +344,7 @@ class Meta extends \Mim\Service
 
             $gtag_property = $this->defaultValue('gtag_property', $opts);
             if($gtag_property){
-                $tx = '<script async src="https://www.googletagmanager.com/gtag/js?id='.$gtag_property.'"></script>';
+                $tx.= '<script async src="https://www.googletagmanager.com/gtag/js?id='.$gtag_property.'"></script>';
                 $tx.= '<script>';
                 $tx.=   'window.dataLayer = window.dataLayer || [];';
                 $tx.=   'function gtag(){dataLayer.push(arguments);}';
