@@ -2,7 +2,7 @@
 /**
  * Meta
  * @package site-meta
- * @version 0.0.1
+ * @version 0.1.1
  */
 
 namespace SiteMeta\Service;
@@ -18,24 +18,24 @@ class Meta extends \Mim\Service
         'article:publisher'             => 'property',
         'article:section'               => 'property',
         'article:tag'                   => 'property',
-        
+
         'fb:admins'                     => 'property',
         'fb:app_id'                     => 'property',
         'fb:pages'                      => 'property',
         'fb:profile_id'                 => 'property',
-        
+
         'alexaVerifyID'                 => 'name',
         'msvalidate.01'                 => 'name',
         'google-site-verification'      => 'name',
         'yandex-verification'           => 'name',
         'p:domain_verify'               => 'name',
-        
+
         'description'                   => 'name',
         'keywords'                      => 'name',
         'generator'                     => 'name',
 
         'format-detection'              => 'name',
-        
+
         'og:description'                => 'property',
         'og:locale'                     => 'property',
         'og:image'                      => 'property',
@@ -44,19 +44,19 @@ class Meta extends \Mim\Service
         'og:type'                       => 'property',
         'og:url'                        => 'property',
         'og:updated_time'               => 'property',
-        
+
         'profile:username'              => 'property',
         'profile:first_name'            => 'property',
         'profile:last_name'             => 'property',
-        
+
         'twitter:card'                  => 'name',
         'twitter:description'           => 'name',
         'twitter:image:src'             => 'name',
         'twitter:title'                 => 'name',
         'twitter:url'                   => 'name',
-        
+
         'theme-color'                   => 'name',
-        
+
         'viewport'                      => 'name'
     ];
 
@@ -180,7 +180,7 @@ class Meta extends \Mim\Service
         ];
 
         foreach($this->meta_default as $name => $prop){
-            $value = $this->defaultValue($prop, $opts);
+            $value = $this->defaultValue($name, $opts);
             if(!$value)
                 continue;
 
@@ -224,7 +224,7 @@ class Meta extends \Mim\Service
                     $tags[] = ['meta', [
                         $attr => $name,
                         'content' => $value
-                    ]];    
+                    ]];
                 }
             }else{
                 $tags[] = ['meta', [
