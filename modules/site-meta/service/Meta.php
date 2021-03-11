@@ -2,7 +2,7 @@
 /**
  * Meta
  * @package site-meta
- * @version 0.1.1
+ * @version 0.1.2
  */
 
 namespace SiteMeta\Service;
@@ -349,7 +349,7 @@ class Meta extends \Mim\Service
                 $tx.=   'window.dataLayer = window.dataLayer || [];';
                 $tx.=   'function gtag(){dataLayer.push(arguments);}';
                 $tx.=   'gtag(\'js\', new Date());';
-                $tx.=   'gtag(\'config\', \'UA-173923084-1\');';
+                $tx.=   'gtag(\'config\', \''.$gtag_property.'\');';
                 $tx.= '</script>' . $nl;
             }
         }
