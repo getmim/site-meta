@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'site-meta',
-    '__version' => '0.1.2',
+    '__version' => '0.1.3',
     '__git' => 'git@github.com:getmim/site-meta.git',
     '__license' => 'MIT',
     '__author' => [
@@ -55,7 +55,7 @@ return [
             // 'locale' => 'en-US',
             // 'name' => 'My Powerfull Site',
             // 'pi_verification' => 'PINTEREST_VERIFICATION',
-            'responsive' => true,
+            'viewport' => 'responsive',
             'tw_js' => false,
             // 'ya_verificationn' => 'YANDEX_VERIFICATION'
         ]
