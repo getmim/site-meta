@@ -180,7 +180,7 @@ class Meta extends \Mim\Service
         ];
 
         foreach($this->meta_default as $name => $prop){
-            $value = $this->defaultValue($name, $opts);
+            $value = $this->defaultValue($prop, $opts);
             if(!$value)
                 continue;
 
