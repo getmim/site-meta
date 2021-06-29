@@ -2,7 +2,7 @@
 /**
  * Meta
  * @package site-meta
- * @version 0.1.2
+ * @version 0.1.5
  */
 
 namespace SiteMeta\Service;
@@ -61,7 +61,7 @@ class Meta extends \Mim\Service
     ];
 
     private $meta_default = [
-        'viewport'      => 'responsive',
+        'viewport'      => 'viewport',
         'alexaVerifyID' => 'al_verification',
         'msvalidate.01' => 'bi_verification',
         'fb:app_id'     => 'fb_appid',
@@ -184,7 +184,7 @@ class Meta extends \Mim\Service
             if(!$value)
                 continue;
 
-            if($prop === 'responsive')
+            if($name === 'viewport' && $value === 'responsive')
                 $value = 'width=device-width, initial-scale=1, shrink-to-fit=no';
 
             if(is_string($value))
